@@ -1,0 +1,11 @@
+<h1>Update An Existing Department,</h1>
+<h1> Or Create A New Department</h1>
+<hr>
+<%= form_for @type do |n| %>
+  <%= n.label :name %>
+  <%= n.text_field :name %>
+
+  <%= n.submit %>
+<% end %>
+
+<%= link_to 'Back', types_path %>

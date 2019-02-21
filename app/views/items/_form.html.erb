@@ -1,0 +1,18 @@
+<h1><%= @item.id ? 'Edit Item' : 'Create Item' %></h1>
+
+<hr>
+<%= form_for [@type, @item] do |n| %>
+  <%= n.label :name %>
+  <%= n.text_field :name %>
+
+  <%= n.label :price %>
+  <%= n.text_field :price %>
+
+  <%= n.label :available %>
+  <%= n.text_field :available %>
+
+  <%= n.submit %>
+<% end %>
+
+<%= link_to 'Back', types_path %>
+
